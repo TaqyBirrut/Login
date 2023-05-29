@@ -1,0 +1,41 @@
+package com.example.login.response
+
+import androidx.room.ColumnInfo
+import com.google.gson.annotations.SerializedName
+
+data class DetailResponse(
+
+	@field:SerializedName("error")
+	val error: Boolean,
+
+	@field:SerializedName("message")
+	val message: String,
+
+	@ColumnInfo(name = "listStory")
+	@field:SerializedName("story")
+	val story: Story
+)
+
+data class Story(
+
+	@field:SerializedName("photoUrl")
+	val photoUrl: String,
+
+	@field:SerializedName("createdAt")
+	val createdAt: String,
+
+	@field:SerializedName("name")
+	val name: String,
+
+	@field:SerializedName("description")
+	val description: String,
+
+	@field:SerializedName("lon")
+	val lon: Any,
+
+	@field:SerializedName("id")
+	val id: String,
+
+	@field:SerializedName("lat")
+	val lat: Any
+)
